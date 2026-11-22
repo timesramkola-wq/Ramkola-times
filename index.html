@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>रामकोला टाइम्स — ताज़ा खबरें</title>
+<meta name="description" content="रामकोला टाइम्स: स्थानीय, राजनीति, खेल, शिक्षा और कृषि की ताज़ा खबरें।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="index.html">रामकोला टाइम्स<small>सच के साथ, आपके अपने क्षेत्र की खबर</small></a>
+  <a class="btn light sm" href="login.html">स्टाफ / एडमिन लॉगिन</a>
+</div></div>
+
+<div class="catbar"><div class="wrap" id="cats"></div></div>
+
+<main class="wrap">
+  <form class="searchrow" id="searchForm">
+    <input id="q" type="search" placeholder="खबर खोजें…">
+    <button class="btn" type="submit">खोजें</button>
+  </form>
+  <div class="grid" id="list"></div>
+  <div class="empty hidden" id="empty">कोई खबर नहीं मिली।</div>
+  <div style="text-align:center;margin-bottom:20px"><button class="btn ghost hidden" id="more">और खबरें देखें</button></div>
+</main>
+<footer>© रामकोला टाइम्स — सर्वाधिकार सुरक्षित</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

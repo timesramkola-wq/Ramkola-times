@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>लॉगिन — रामकोला टाइम्स</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="index.html">रामकोला टाइम्स</a>
+  <a class="btn light sm" href="index.html">← वेबसाइट</a>
+</div></div>
+<main class="wrap">
+  <form class="loginbox" id="f">
+    <h2>स्टाफ / एडमिन लॉगिन</h2>
+    <label for="email">ईमेल</label>
+    <input id="email" type="email" autocomplete="username" required>
+    <label for="pw">पासवर्ड</label>
+    <input id="pw" type="password" autocomplete="current-password" required>
+    <div class="actions"><button class="btn" style="width:100%" id="go">लॉगिन करें</button></div>
+    <p class="small">खाता सिर्फ़ एडमिन बना सकता है। पासवर्ड भूल गए हों तो एडमिन से संपर्क करें।</p>
+  </form>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

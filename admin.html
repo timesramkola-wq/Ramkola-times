@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>एडमिन पैनल — रामकोला टाइम्स</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="hidden">
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="index.html">रामकोला टाइम्स<small>एडमिन पैनल</small></a>
+  <div class="who"><span id="me"></span><br><button class="btn light sm" id="out">लॉगआउट</button></div>
+</div></div>
+<div class="tabs"><div class="wrap">
+  <button class="tab" data-t="pending">⏳ अनुमोदन</button>
+  <button class="tab" data-t="all">📰 सभी खबरें</button>
+  <button class="tab" data-t="staff">👥 स्टाफ</button>
+  <button class="tab" data-t="certs">🎓 प्रमाणपत्र</button>
+</div></div>
+
+<main class="wrap">
+  <section class="panel" data-sec="pending">
+    <h2>समीक्षा के लिए आई खबरें</h2><div id="pendingList"></div>
+  </section>
+
+  <section class="panel" data-sec="all">
+    <h2>सभी खबरें</h2>
+    <label for="fstatus">स्थिति</label>
+    <select id="fstatus">
+      <option value="">सभी</option><option value="published">प्रकाशित</option>
+      <option value="pending">समीक्षा में</option><option value="rejected">अस्वीकृत</option>
+      <option value="draft">ड्राफ्ट</option>
+    </select>
+    <div id="allList"></div>
+  </section>
+
+  <section class="panel" data-sec="staff">
+    <h2>नया स्टाफ जोड़ें</h2>
+    <form id="sf">
+      <div class="row">
+        <div><label for="sname">पूरा नाम</label><input id="sname" required></div>
+        <div><label for="sdes">पद</label><input id="sdes" placeholder="जैसे: संवाददाता"></div>
+        <div><label for="semail">ईमेल (लॉगिन के लिए)</label><input id="semail" type="email" required></div>
+        <div><label for="sphone">मोबाइल</label><input id="sphone" type="tel"></div>
+      </div>
+      <label for="spw">शुरुआती पासवर्ड (कम से कम 8 अक्षर)</label>
+      <input id="spw" type="text" minlength="8" required autocomplete="off">
+      <div class="actions"><button class="btn" id="sadd">स्टाफ जोड़ें</button></div>
+      <p class="small">यह ईमेल और पासवर्ड स्टाफ को भेज दें। Supabase में "Confirm email" बंद होना चाहिए (गाइड देखें)।</p>
+    </form>
+    <h2 style="margin-top:26px">स्टाफ सूची</h2><div id="staffList"></div>
+  </section>
+
+  <section class="panel" data-sec="certs">
+    <h2>प्रमाणपत्र अपलोड करें</h2>
+    <form id="cf">
+      <label for="cstaff">स्टाफ चुनें</label><select id="cstaff" required></select>
+      <div class="row">
+        <div><label for="ctitle">प्रमाणपत्र का नाम</label><input id="ctitle" required placeholder="जैसे: पत्रकारिता प्रशिक्षण"></div>
+        <div><label for="cdate">जारी होने की तारीख</label><input id="cdate" type="date"></div>
+      </div>
+      <label for="cfile">फ़ाइल (PDF / फ़ोटो, अधिकतम 5 MB)</label>
+      <input id="cfile" type="file" accept="application/pdf,image/*" required>
+      <div class="actions"><button class="btn" id="cadd">अपलोड करें</button></div>
+    </form>
+    <h2 style="margin-top:26px">सभी प्रमाणपत्र</h2><div id="certList"></div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
