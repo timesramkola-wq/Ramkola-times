@@ -3,52 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b3141b">
 <meta name="robots" content="noindex">
 <title>स्टाफ पैनल — रामकोला टाइम्स</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description" content="स्टाफ पैनल">
+<meta property="og:title" content="स्टाफ पैनल — रामकोला टाइम्स"><meta property="og:description" content="स्टाफ पैनल"><meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="hidden">
-<div class="topbar"><div class="wrap">
-  <a class="brand" href="index.html">रामकोला टाइम्स<small>स्टाफ पैनल</small></a>
-  <div class="who"><span id="me"></span><br><button class="btn light sm" id="out">लॉगआउट</button></div>
-</div></div>
+<div id="site-header" data-variant="panel" data-title="स्टाफ पैनल"></div>
 <div class="tabs"><div class="wrap">
-  <button class="tab" data-t="write">✍️ खबर लिखें</button>
-  <button class="tab" data-t="mine">📰 मेरी खबरें</button>
-  <button class="tab" data-t="certs">🎓 मेरे प्रमाणपत्र</button>
+  <button class="tab" data-t="write">✍️ खबर लिखें</button><button class="tab" data-t="mine">📰 मेरी खबरें</button><button class="tab" data-t="certs">🎓 मेरे प्रमाणपत्र</button>
 </div></div>
-
 <main class="wrap">
-  <section class="panel" data-sec="write">
-    <h2 id="formTitle">नई खबर लिखें</h2>
+  <section class="panel" data-sec="write"><h2 id="formTitle">नई खबर लिखें</h2>
     <form id="nf">
-      <label for="title">शीर्षक</label>
-      <input id="title" maxlength="200" required>
-      <div class="row">
-        <div><label for="cat">श्रेणी</label><select id="cat"></select></div>
-        <div><label for="img">फ़ोटो (वैकल्पिक)</label><input id="img" type="file" accept="image/*"></div>
-      </div>
+      <label for="title">शीर्षक</label><input id="title" maxlength="200" required>
+      <div class="row"><div><label for="cat">श्रेणी</label><select id="cat"></select></div>
+      <div><label for="img">फ़ोटो (वैकल्पिक)</label><input id="img" type="file" accept="image/*"></div></div>
       <img id="prev" class="thumb hidden" alt="">
       <label for="body">खबर का पूरा विवरण</label>
-      <textarea id="body" required placeholder="यहाँ खबर लिखें… नया पैराग्राफ़ के लिए Enter दबाएँ।"></textarea>
-      <div class="actions">
-        <button type="button" class="btn ghost" id="saveDraft">ड्राफ्ट सहेजें</button>
+      <textarea id="body" required placeholder="यहाँ खबर लिखें… नए पैराग्राफ़ के लिए Enter दबाएँ।"></textarea>
+      <div class="actions"><button type="button" class="btn ghost" id="saveDraft">ड्राफ्ट सहेजें</button>
         <button type="submit" class="btn" id="submitNews">समीक्षा के लिए भेजें</button>
-        <button type="button" class="btn ghost hidden" id="cancelEdit">रद्द करें</button>
-      </div>
+        <button type="button" class="btn ghost hidden" id="cancelEdit">रद्द करें</button></div>
       <p class="small">भेजने के बाद एडमिन जाँच कर "प्रकाशित" करेगा। प्रकाशित होने तक आप खबर सुधार सकते हैं।</p>
-    </form>
-  </section>
-
+    </form></section>
   <section class="panel" data-sec="mine"><h2>मेरी खबरें</h2><div id="mineList"></div></section>
   <section class="panel" data-sec="certs"><h2>मेरे प्रमाणपत्र</h2><div id="certList"></div></section>
 </main>
-
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/config.js"></script>
 <script src="js/common.js"></script>
+<script src="js/layout.js"></script>
 <script src="js/staff.js"></script>
 </body>
 </html>

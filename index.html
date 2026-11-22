@@ -3,34 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b3141b">
 <title>रामकोला टाइम्स — ताज़ा खबरें</title>
-<meta name="description" content="रामकोला टाइम्स: स्थानीय, राजनीति, खेल, शिक्षा और कृषि की ताज़ा खबरें।">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="description" content="रामकोला टाइम्स: रामकोला और आसपास के क्षेत्र की स्थानीय, राजनीति, खेल, शिक्षा और कृषि की ताज़ा खबरें।">
+<meta property="og:title" content="रामकोला टाइम्स — ताज़ा खबरें"><meta property="og:description" content="रामकोला टाइम्स: रामकोला और आसपास के क्षेत्र की स्थानीय, राजनीति, खेल, शिक्षा और कृषि की ताज़ा खबरें।"><meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="topbar"><div class="wrap">
-  <a class="brand" href="index.html">रामकोला टाइम्स<small>सच के साथ, आपके अपने क्षेत्र की खबर</small></a>
-  <a class="btn light sm" href="login.html">स्टाफ / एडमिन लॉगिन</a>
-</div></div>
-
+<div id="site-header"></div>
+<section class="hero"><div class="wrap">
+  <h1>सच के साथ, आपके क्षेत्र की खबर</h1>
+  <p>रामकोला और आसपास की हर ताज़ा खबर — सबसे पहले, सबसे भरोसेमंद।</p>
+  <div class="actions"><a class="btn gold" href="#news">ताज़ा खबरें पढ़ें</a><a class="btn light" href="contact.html">अपनी खबर भेजें</a></div>
+</div></section>
+<div class="ticker hidden" id="ticker"><div class="lbl">⚡ ताज़ा खबर</div><div class="track"><div class="run" id="run"></div></div></div>
 <div class="catbar"><div class="wrap" id="cats"></div></div>
-
-<main class="wrap">
-  <form class="searchrow" id="searchForm">
-    <input id="q" type="search" placeholder="खबर खोजें…">
-    <button class="btn" type="submit">खोजें</button>
-  </form>
+<main class="wrap" id="news">
+  <div class="sechead"><h2 id="secTitle">ताज़ा खबरें</h2>
+    <form class="searchrow" id="searchForm"><input id="q" type="search" placeholder="खबर खोजें…"><button class="btn sm" type="submit">खोजें</button></form></div>
   <div class="grid" id="list"></div>
   <div class="empty hidden" id="empty">कोई खबर नहीं मिली।</div>
-  <div style="text-align:center;margin-bottom:20px"><button class="btn ghost hidden" id="more">और खबरें देखें</button></div>
+  <div style="text-align:center;margin-bottom:10px"><button class="btn ghost hidden" id="more">और खबरें देखें</button></div>
 </main>
-<footer>© रामकोला टाइम्स — सर्वाधिकार सुरक्षित</footer>
+<div id="site-footer"></div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="js/config.js"></script>
 <script src="js/common.js"></script>
+<script src="js/layout.js"></script>
 <script src="js/home.js"></script>
 </body>
 </html>

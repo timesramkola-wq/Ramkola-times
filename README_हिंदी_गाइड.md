@@ -52,7 +52,7 @@ update public.profiles
   where email = 'आपका@email.com';
 ```
 
-## स्टेप 5 — चाबियाँ (URL और anon key) कॉपी करें
+## स्टेप 5 — चाबियाँ (URL और anon key) और चैनल की जानकारी भरें
 
 1. **Project Settings** (⚙️) → **API** (या **Data API / API Keys**)।
 2. **Project URL** कॉपी करें, जैसे `https://abcd1234.supabase.co`।
@@ -63,6 +63,8 @@ update public.profiles
 SUPABASE_URL: "https://abcd1234.supabase.co",
 SUPABASE_ANON_KEY: "यहाँ आपकी anon key",
 ```
+
+5. उसी फ़ाइल में `SITE` हिस्से में चैनल का फ़ोन, WhatsApp, ईमेल, पता, Facebook/YouTube लिंक और "हमारे बारे में" का टेक्स्ट भरें (खाली छोड़ेंगे तो वह हिस्सा साइट पर नहीं दिखेगा)।
 
 ❌ **`service_role` / secret key कभी इस फ़ाइल में न डालें।** anon key सार्वजनिक रहती है, वह सुरक्षित है।
 

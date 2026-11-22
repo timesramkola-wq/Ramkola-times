@@ -14,7 +14,7 @@
     <span class="tag">${esc(n.category)}</span>
     <h1>${esc(n.title)}</h1>
     <div class="meta">${esc(n.author_name || '')} · ${fmtDate(n.published_at)}</div>
-    ${n.image_url ? `<img class="hero" src="${esc(n.image_url)}" alt="">` : ''}
+    ${n.image_url ? `<img class="hero-img" src="${esc(n.image_url)}" alt="">` : ''}
     <div class="txt">${paras}</div>
     <div class="actions"><a class="btn ok" target="_blank" rel="noopener" href="${wa}">WhatsApp पर शेयर करें</a></div>`;
 })();

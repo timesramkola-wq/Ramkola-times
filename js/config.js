@@ -1,7 +1,24 @@
-// ⚠️ सिर्फ़ ये दो मान बदलें (Supabase > Project Settings > API से मिलेंगे)
-// anon key सार्वजनिक रहती है — सुरक्षा Row Level Security से होती है।
-// ❌ यहाँ "service_role" key कभी न डालें।
+// ⚠️ इस फ़ाइल में सिर्फ़ अपनी जानकारी भरनी है। बाकी कोड छूना नहीं है।
 window.APP_CONFIG = {
+
+  // ---- 1) Supabase (Project Settings > API से) ----
+  // anon key सार्वजनिक रहती है, सुरक्षा Row Level Security से होती है।
+  // ❌ "service_role" key यहाँ कभी न डालें।
   SUPABASE_URL: "https://YOUR-PROJECT-ID.supabase.co",
-  SUPABASE_ANON_KEY: "YOUR-ANON-PUBLIC-KEY"
+  SUPABASE_ANON_KEY: "YOUR-ANON-PUBLIC-KEY",
+
+  // ---- 2) चैनल की जानकारी (खाली छोड़ेंगे तो वह हिस्सा साइट पर नहीं दिखेगा) ----
+  SITE: {
+    name:     "रामकोला टाइम्स",
+    tagline:  "सच के साथ, आपके क्षेत्र की खबर",
+    about:    "रामकोला टाइम्स एक स्थानीय समाचार चैनल है। हमारा उद्देश्य रामकोला और आसपास के क्षेत्र की सही, निष्पक्ष और ताज़ा खबरें सीधे आप तक पहुँचाना है। हमारी हर खबर प्रकाशित होने से पहले संपादक की जाँच से गुज़रती है।",
+    editor:   "",                         // संपादक का नाम
+    phone:    "",                         // जैसे: +91 98XXXXXXXX
+    whatsapp: "",                         // सिर्फ़ अंक, देश कोड के साथ: 919876543210
+    email:    "",
+    address:  "",                         // जैसे: मुख्य बाज़ार, रामकोला
+    facebook: "",                         // पूरा लिंक
+    youtube:  "",
+    instagram:""
+  }
 };
